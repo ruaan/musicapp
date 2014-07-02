@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artist Name:</strong>
+  <%= @album.artistName %>
+</p>
+
+<p>
+  <strong>Album Cover:</strong>
+ <!--<%= /@album.albumCover /%>-->
+  <%= image_tag(@album.albumCover_url, :width => 600) if @album.albumCover.present? %>
+</p>
+
+<p>
+  <strong>Album Name:</strong>
+  <%= @album.albumName %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @album.genre %>
+</p>
+
+<p>
+  <strong>Release Date:</strong>
+  <%= @album.releaseDate %>
+</p>
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>
